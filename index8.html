@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun() {
+            pat = /abc/
+            var a = document.getElementById('id1').value
+            if(!pat.test(a)){
+                alert('Cannot submit')
+            }else{
+                alert('submitted')
+            }
+        }
+        function fun2() {
+            var a = document.getElementById('pass')
+            console.log(a.value)
+            if(a.value.length < 6) {
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="index1.html" name="frm" onsubmit="return fun2()">
+        Username <input type="text">
+        Password <input type="password" id="pass">
+        <input type="submit">
+    </form>
+</body>
+</html>
