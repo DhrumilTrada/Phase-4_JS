@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2 id="a" onmouseout="a3()" style="font-family: serif; border: 2px solid; border-radius: 10px; padding: 10px; display: inline-block;" onmouseover="a2()">Hello world.....</h2>
+    <button onclick="a1()">Find date!</button>
+    <button onclick="red()">Red</button>
+    <button onclick="green()">Green</button>
+    <script>
+        function a1(){
+            var a = new Date()
+            document.write(a);
+            document.write('<h2 id="a" onmouseout="a3()" style="font-family: serif; border: 2px solid; border-radius: 10px; padding: 10px; display: inline-block;" onmouseover="a2()">Hello world.....</h2>');
+            document.write('<button onclick="red()">Red</button>');
+            document.write('<button onclick="green()">Green</button>');
+        }
+        function a2(){
+            var a = document.getElementById("a");
+            a.style.backgroundColor = "yellow";
+        }
+        function a3(){
+            var a = document.getElementById("a");
+            a.style.backgroundColor = "white";
+        }
+        function red(){
+            document.body.style.backgroundColor = "aliceblue";
+        }
+        function green(){
+            document.body.style.backgroundColor = "lightgray";
+        }
+    </script>
+</body>
+</html>
